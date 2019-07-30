@@ -28,11 +28,20 @@ cc.Class({
         //     }
         // },
     },
+shake:function(){
+var down=cc.rotateTo(0.5,0).easing(cc.easeSineIn());
+var lu=cc.rotateBy(0.5,60).easing(cc.easeSineOut());
+var ru=cc.rotateBy(0.5,-60).easing(cc.easeSineOut());
+return cc.repeatForever(cc.sequence(lu,down,ru,down));
 
+},
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
 
+    // onLoad () {},
+onLoad(){
+    this.node.runAction(this.shake());
+},
     start () {
 
     },
