@@ -59,9 +59,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3673583984375,
-      "y": 0.3673583984375,
-      "z": 0.3673583984375
+      "x": 0.6185546875,
+      "y": 0.6185546875,
+      "z": 0.6185546875
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -361,7 +361,7 @@
   {
     "__type__": "cc.Node",
     "_name": "l2b",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 2
     },
@@ -476,7 +476,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone2",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -564,7 +564,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone5",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -652,7 +652,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold2",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -740,7 +740,7 @@
   {
     "__type__": "cc.Node",
     "_name": "diamond1",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -828,7 +828,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold8",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -916,7 +916,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone7",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1004,7 +1004,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold3",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1092,7 +1092,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone6",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1180,7 +1180,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold5",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1268,7 +1268,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone1",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1356,7 +1356,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold1",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1444,7 +1444,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold7",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1532,7 +1532,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold4",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1620,7 +1620,7 @@
   {
     "__type__": "cc.Node",
     "_name": "gold6",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1708,7 +1708,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone8",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1796,7 +1796,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone3",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1884,7 +1884,7 @@
   {
     "__type__": "cc.Node",
     "_name": "stone4",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
