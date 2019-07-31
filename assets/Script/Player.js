@@ -61,11 +61,10 @@ if(Math.abs(this.node.x>467)||Math.abs(this.node.y)>437){
         this.node.x=-467;
     }
     //this.node.runAction(cc.sequence(cc.moveTo(2,cc.v2(0,24)),this.shake()));
-    this.node.runAction(cc.moveTo(2,cc.v2(0,24)));
-    if(this.node.y==24&&this.node.x==0){
-        this.node.stopAllActions();
-        this.node.runAction(this.shake());
-    }
+    var pullback=cc.moveTo(2,cc.v2(0,24));
+     var finished = cc.callFunc(function(){this.shake()}, this);
+    this.node.runAction(cc.sequence(pullback,this.shake()));
+  
 }
 },
     
