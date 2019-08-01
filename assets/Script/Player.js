@@ -21,20 +21,21 @@ cc.Class({
         var down=cc.rotateTo(0.5,0).easing(cc.easeSineIn());
         var lu=cc.rotateTo(0.5,60).easing(cc.easeSineOut());
         var ru=cc.rotateTo(0.5,-60).easing(cc.easeSineOut());
+        
         return cc.repeatForever(cc.sequence(lu,down,ru,down));
-
+       
     },
     // LIFE-CYCLE CALLBACKS:
     onKeyDown(event){
-        if(event.keyCode==cc.macro.KEY.down&&this.hooking==false)
+        if(event.keyCode==cc.macro.KEY.down&&this.hooking==false&&this.isRotating==true)
         {
             cc.log('hhaha');
-
+            
             this.hooking=true;//将状态转为射出
             this.node.stopAllActions();
 
             var outh=cc.moveBy(2,cc.v2(-600*Math.tan(Math.PI/180*this.node.rotation),-600)).easing(cc.easeSineIn());
-
+            this.isRotating=false;
             this.node.runAction(outh);
         }
     },
@@ -49,6 +50,7 @@ cc.Class({
         this.source=this.node.getPosition();
         this.hooking=false;
        this.stones=null;
+       this.isRotating=true;
     },
 
     onCollisionEnter: function (other, self) {
@@ -68,12 +70,14 @@ cc.Class({
                 
                 if(this.stones!=null)
                 {
-                   this.stones.destroy();
+                   
+                    this.stones.destroy();  
                    this.stones=null;
+                 
                 }
                 cc.log("finished");
                 this.node.runAction(this.shake());
-               
+                this.isRotating=true;
             }, this);
             this.node.runAction(cc.sequence(pullback,finished));
             cc.log("node is:"+other.node.name);
@@ -103,7 +107,7 @@ cc.Class({
        //pos=parent.convertToNodeSpaceAR(pos);
         //cc.log("posb"+child.position);
         
-        child.setPosition(cc.v2(0,-child.height/2));       
+        child.setPosition(cc.v2(0,-50*1.26));       
       }
   
 });
