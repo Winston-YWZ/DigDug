@@ -15,9 +15,6 @@
     "_children": [
       {
         "__id__": 2
-      },
-      {
-        "__id__": 88
       }
     ],
     "_active": false,
@@ -44,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.2562754526037313,
-      "y": 0.2562754526037313,
-      "z": 0.2562754526037313
+      "x": 0.40770732711771923,
+      "y": 0.40770732711771923,
+      "z": 0.40770732711771923
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -2571,7 +2568,7 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": -45
     },
     "_size": {
       "__type__": "cc.Size",
@@ -2591,8 +2588,8 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": null,
-    "_type": 1,
-    "_segments": 68,
+    "_type": 0,
+    "_segments": 3,
     "_N$alphaThreshold": 0,
     "_N$inverted": false,
     "_id": "4ceK7j/wdKoLHNWz23j/BC"
