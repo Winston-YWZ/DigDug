@@ -14,7 +14,7 @@ cc.Class({
     properties: {
         speed:10,
 
-
+         
 
     },
     shake:function(){
@@ -26,7 +26,7 @@ cc.Class({
     },
     // LIFE-CYCLE CALLBACKS:
     onKeyDown(event){
-        if(event.keyCode==cc.macro.KEY.down)
+        if(event.keyCode==cc.macro.KEY.down&&this.hooking==false)
         {
             cc.log('hhaha');
 
@@ -46,27 +46,38 @@ cc.Class({
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         var manager = cc.director.getCollisionManager();
         manager.enabled = true;
-
+        this.source=this.node.getPosition();
+        this.hooking=false;
+       this.stones=null;
     },
 
     onCollisionEnter: function (other, self) {
         console.log('on collision enter');
         if(this.hooking==true)
         {
+            if(other.node.group!="wall")
+            {
+               this.addChild(self.node,other.node);
+           this.stones=other.node;
+            }
             this.hooking=false;
-            var pullback=cc.moveTo(this.caltime(),cc.v2(0,24));
+            var pullback=cc.moveTo(this.caltime(),this.source);
             cc.log("ready to pull back");
             this.node.stopAllActions();
             var finished = cc.callFunc(function(){
+                
+                if(this.stones!=null)
+                {
+                   this.stones.destroy();
+                   this.stones=null;
+                }
                 cc.log("finished");
                 this.node.runAction(this.shake());
+               
             }, this);
             this.node.runAction(cc.sequence(pullback,finished));
-            cc.log("group is:"+other.node.group)
-            if(other.node.group!="wall")
-            {
-                this.node.addChild(other.node);
-            }
+            cc.log("node is:"+other.node.name);
+           
         }
     },
     start () {
@@ -83,6 +94,16 @@ cc.Class({
         return time;
 
     },
-
-
+     addChild(parent,child)
+    {
+        //var pos= child.convertToWorldSpaceAR(child.position);
+      //cc.log("posa"+child.position);
+      //cc.log("pos_world"+pos); 
+      child.parent = parent;
+       //pos=parent.convertToNodeSpaceAR(pos);
+        //cc.log("posb"+child.position);
+        
+        child.setPosition(cc.v2(0,-child.height/2));       
+      }
+  
 });
