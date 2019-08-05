@@ -41,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.5278031643091577,
-      "y": 0.5278031643091577,
-      "z": 0.5278031643091577
+      "x": 0.695068359375,
+      "y": 0.695068359375,
+      "z": 0.695068359375
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -703,8 +703,8 @@
       "__id__": 12
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 220,
+    "value": 10,
     "_id": "3e/jDTcitOy7uWGc6y50bO"
   },
   {
@@ -855,8 +855,8 @@
       "__id__": 18
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 200,
+    "value": 20,
     "_id": "4cb4ValK9NrZH9wTuiBdTR"
   },
   {
@@ -998,8 +998,8 @@
       "__id__": 23
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 75,
+    "value": 30,
     "_id": "416A2tL2xMYoTybwM9l3SA"
   },
   {
@@ -1150,8 +1150,8 @@
       "__id__": 29
     },
     "_enabled": true,
-    "speed": 100,
-    "value": 200,
+    "speed": 75,
+    "value": 30,
     "_id": "faOUTqC6pBQqvBHM2fns0+"
   },
   {
@@ -1290,8 +1290,8 @@
       "__id__": 34
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 200,
+    "value": 75,
     "_id": "5fThK5VQVAWZqZfJuCjLel"
   },
   {
@@ -1430,8 +1430,8 @@
       "__id__": 39
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 175,
+    "value": 75,
     "_id": "ccUTP6R91IU7IEF6oXHafc"
   },
   {
@@ -1570,8 +1570,8 @@
       "__id__": 44
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 100,
+    "value": 200,
     "_id": "38X5nP9UJO6Lp18RuFzvzd"
   },
   {
@@ -1708,8 +1708,8 @@
       "__id__": 49
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 150,
+    "value": 200,
     "_id": "4fOFSiDT5AwK8AfF4vM6zA"
   },
   {
@@ -1835,8 +1835,8 @@
       "__id__": 53
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 175,
+    "value": 75,
     "_id": "7b1DsN7j9PtoGcp+PjB9UI"
   },
   {
@@ -1962,8 +1962,8 @@
       "__id__": 57
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 200,
+    "value": 50,
     "_id": "a2y8GccfpNxKsxKmsPdH+X"
   },
   {
@@ -2089,8 +2089,8 @@
       "__id__": 61
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 200,
+    "value": 50,
     "_id": "0aIcV1kaRHTYqtE+XMibO7"
   },
   {
@@ -2216,8 +2216,8 @@
       "__id__": 65
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 200,
+    "value": 50,
     "_id": "b6+APPxdVMTp2FMnQEcRlw"
   },
   {
@@ -2343,8 +2343,8 @@
       "__id__": 69
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 200,
+    "value": 50,
     "_id": "a2Nor2/NpAe5fF+dIuUxkh"
   },
   {
@@ -2470,8 +2470,8 @@
       "__id__": 73
     },
     "_enabled": true,
-    "speed": 0,
-    "value": 0,
+    "speed": 200,
+    "value": 50,
     "_id": "a4VbN5M0FJqLP84Hea2xxu"
   },
   {
@@ -2796,8 +2796,8 @@
       "__id__": 79
     },
     "_enabled": true,
-    "speed": 200,
-    "acc": 80,
+    "speed": 300,
+    "acc": 150,
     "maxRotation": 65,
     "minRotation": -65,
     "rotateTime": 0.5,
