@@ -39,8 +39,8 @@ cc.Class({
     onLoad () {
     //读取设置的时间
     this.timer=this.timeDisplay.getComponent('counter').time;
-
-
+   this.BestScore=this.GetBestScore();
+  
     },
 
     start () {
@@ -65,5 +65,21 @@ cc.Class({
         this.timeDisplay.string='0';
         //cc.director.end();
     
-    }
+    },
+    SetBestScore (value){
+       if(value>this.BestScore){
+        cc.sys.localStorage.setItem("HighestScore", value);
+       }
+       else
+       {
+           cc.log("这并不比历史最高分要高，所以不会存储该值");
+       }
+    },
+
+    GetBestScore(){
+    return cc.sys.localStorage.getItem("HighestScore");
+    },
+
+
+
 });
