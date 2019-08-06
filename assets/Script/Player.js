@@ -78,6 +78,9 @@ cc.Class({
              //设置钩子的向下加速
              this.downAcc=true;
              this.currentSpeed=0;
+             //获取动画
+             var anim=this.getComponent(cc.Animation);
+             anim.play('hookopen');
             }           
         }
     },
@@ -160,6 +163,9 @@ cc.Class({
                 cc.log("当前的速度"+this.currentSpeed);
                 this.node.y+=this.currentSpeed*Math.cos(Math.PI/180*this.node.angle)*dt;
             }else{
+                //获取动画
+                var anim=this.getComponent(cc.Animation);
+                anim.play('hookclose');
                 this.backAcc=false;
                 this.node.runAction(this.shake());
             }
