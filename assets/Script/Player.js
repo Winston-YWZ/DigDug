@@ -53,6 +53,7 @@ cc.Class({
         if(this.other!=null){
             //增加分数
             this.currentScore+=this.other.node.getComponent("GoldAttribute").value;
+            cc.sys.localStorage.setItem("currentscore",this.currentScore);
             //将金子摆放到地面
             this.other.node.parent=cc.find("Canvas/GainedGold");
             this.other.node.anchorY=0;

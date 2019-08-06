@@ -40,11 +40,14 @@ cc.Class({
         type:cc.string
        },
        TargetScore:0,
-    
-tip:{
-default:null,
-type:cc.Prefab,
-},
+       DialogSprite:{
+           default:null,
+           type:cc.Sprite
+       } ,  
+  Dialogbotton:{
+    default:null,
+    type:cc.Sprite
+  }
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -53,7 +56,7 @@ type:cc.Prefab,
     //读取设置的时间
     this.timer=this.timeDisplay.getComponent('counter').time;
    this.BestScore=this.GetBestScore();
-  
+
     },
 
     start () {
@@ -74,18 +77,21 @@ type:cc.Prefab,
         }
     },
     GameOver:function(){
+      if(this.DialogSprite.node.active==false)
         this.timeDisplay.node.color="";
         this.timeDisplay.string='0';
         //游戏转场
-      if(cc.find('hook').getComponent("Player").currentScore>this.TargetScore)
+        if(cc.sys.localStorage.getItem("currentscore")>=this.TargetScore)
         cc.director.loadScene(this.NextScene);
         //cc.director.end();
       else
-{
-   cc.instantiate(tip);
-   tip.node.setPosition(cc.v2(480,320));
-    //do something
-}    },
+       {
+          this.DialogSprite.node.active=true;
+          this.Dialogbotton.node.active=true;
+          this.Dialogbotton.node.getComponent("button").Targetscene=this.LastScene;
+          //do something
+      }   
+        },
     SetBestScore (value){
        if(value>this.BestScore){
         cc.sys.localStorage.setItem("HighestScore", value);

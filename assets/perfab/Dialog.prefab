@@ -14,7 +14,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Dialog",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": null,
     "_children": [
       {
@@ -26,13 +26,9 @@
     ],
     "_active": true,
     "_level": 1,
-    "_components": [
-      {
-        "__id__": 11
-      }
-    ],
+    "_components": [],
     "_prefab": {
-      "__id__": 12
+      "__id__": 11
     },
     "_opacity": 255,
     "_color": {
@@ -365,7 +361,7 @@
       "__id__": 5
     },
     "_enabled": true,
-    "SceneName": 0,
+    "Targetscene": "",
     "_id": ""
   },
   {
@@ -378,17 +374,6 @@
     },
     "fileId": "9fRGHAr9dI6ZAdOf594fCu",
     "sync": false
-  },
-  {
-    "__type__": "78de7fTXFJNZ7K6z7G7tDoB",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "SceneName": null,
-    "_id": ""
   },
   {
     "__type__": "cc.PrefabInfo",
