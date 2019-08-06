@@ -31,7 +31,7 @@ cc.Class({
             default:null,
             type:cc.Label
         },
-       
+       NextScene:0,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -57,12 +57,14 @@ cc.Class({
             this.timeDisplay.node.color=new cc.color(239,22,22,255)
         }
         if(this.timer<=0){
-           GameOver() 
+           this.GameOver() 
         }
     },
     GameOver:function(){
         this.timeDisplay.node.color="";
         this.timeDisplay.string='0';
+        //游戏转场
+        cc.director.loadScene(this.NextScene);
         //cc.director.end();
     
     },

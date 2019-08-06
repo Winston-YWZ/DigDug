@@ -27,6 +27,9 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+   
+      SceneName:null,
+
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -34,7 +37,7 @@ cc.Class({
     // onLoad () {},
 
     zhuanchang(){
-        cc.director.loadScene("lv1");
+        cc.director.loadScene(this.SceneName);
     },
     start () {
 
