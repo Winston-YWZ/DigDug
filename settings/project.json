@@ -30,7 +30,7 @@
     "height": 640,
     "width": 960
   },
+  "start-scene": "5b1fd0a6-bb19-4aa7-8192-75335d4e7f7b",
   "use-customize-simulator": false,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }
