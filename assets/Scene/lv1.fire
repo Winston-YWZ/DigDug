@@ -41,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.6025390625,
-      "y": 0.6025390625,
-      "z": 0.6025390625
+      "x": 0.3640995260663507,
+      "y": 0.3640995260663507,
+      "z": 0.3640995260663507
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -3900,6 +3900,12 @@
     "_enabled": true,
     "timeDisplay": {
       "__id__": 96
+    },
+    "NextScene": "shop1",
+    "LastScene": "begin",
+    "TargetScore": 650,
+    "tip": {
+      "__uuid__": "21722ce6-ede0-44d6-b905-501b484a9dfb"
     },
     "_id": "f72JEwX3tBwLkXKI41BHhP"
   }

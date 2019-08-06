@@ -28,7 +28,7 @@ cc.Class({
         //     }
         // },
    
-      SceneName:null,
+      SceneName:0,
 
     },
 

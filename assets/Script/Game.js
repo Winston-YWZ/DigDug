@@ -31,7 +31,20 @@ cc.Class({
             default:null,
             type:cc.Label
         },
-       NextScene:0,
+       NextScene:{
+        default:"",  
+        type:cc.string
+       },
+       LastScene:{
+       default:"",
+        type:cc.string
+       },
+       TargetScore:0,
+    
+tip:{
+default:null,
+type:cc.Prefab,
+},
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -57,17 +70,22 @@ cc.Class({
             this.timeDisplay.node.color=new cc.color(239,22,22,255)
         }
         if(this.timer<=0){
-           this.GameOver() 
+           this.GameOver(); 
         }
     },
     GameOver:function(){
         this.timeDisplay.node.color="";
         this.timeDisplay.string='0';
         //游戏转场
+      if(cc.find('hook').getComponent("Player").currentScore>this.TargetScore)
         cc.director.loadScene(this.NextScene);
         //cc.director.end();
-    
-    },
+      else
+{
+   cc.instantiate(tip);
+   tip.node.setPosition(cc.v2(480,320));
+    //do something
+}    },
     SetBestScore (value){
        if(value>this.BestScore){
         cc.sys.localStorage.setItem("HighestScore", value);
