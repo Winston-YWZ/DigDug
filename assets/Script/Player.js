@@ -18,7 +18,8 @@ cc.Class({
         acc:10,
         maxRotation:0,
         minRotation:0,
-        rotateTime:0.5
+        rotateTime:0.5,
+        BoostDuration:0,
     },
     // onLoad () {},
     onLoad(){
@@ -39,6 +40,9 @@ cc.Class({
         this.downAcc=false;
         //钩子向上时的加速度
         this.backAcc=false;
+        //是否使用了加速效果；
+        this.IsBoosting=false;
+
     },
     shake:function(){
         //钩子是否在旋转状态
@@ -99,10 +103,19 @@ cc.Class({
                 this.other.node.y=-45;
                 this.other.node.x=0;
                 //获得回拉的最大速度
-                this.maxSpeed=this.other.node.getComponent("GoldAttribute").speed;
+               if(this.IsBoosting)
+                {
+                   this.maxSpeed=this.speed;
+                   this.currentBackAcc=this.maxSpeed/2;
+                }
+                else
+                {
+                     this.maxSpeed=this.other.node.getComponent("GoldAttribute").speed;
+                     this.currentBackAcc=this.maxSpeed/4;             
+                }
                 cc.log("速度"+this.other.node.getComponent("GoldAttribute").speed);
                 //设置回拉的加速
-                this.currentBackAcc=this.maxSpeed/4;
+                
             }else{
                 this.other=null;
                 this.maxSpeed=this.speed;
@@ -117,6 +130,26 @@ cc.Class({
             // this.node.runAction(cc.sequence(pullback,finished))
         }
     },
+   boost(){
+       if(this.IsBoosting==false)
+       {
+          this.IsBoosting=true
+          if(this.backAcc)
+          {
+            this.maxSpeed=this.speed;
+            this.currentBackAcc=this.maxSpeed/2;
+          }
+          this.scheduleOnce(function() {
+            this.IsBoosting=false;
+            if(this.other!=null)
+            {
+                this.maxSpeed=this.other.node.getComponent("GoldAttribute").speed;
+                this.currentBackAcc=this.maxSpeed/4;         
+            }
+            cc.log("加速结束");
+        }, this.BoostDuration);
+        }
+   },
     start () {
 
     },
@@ -172,5 +205,5 @@ cc.Class({
         }
 
     }
-
+   
 });
