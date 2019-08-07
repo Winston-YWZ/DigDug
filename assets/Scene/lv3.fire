@@ -41,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.6939453125,
-      "y": 0.6939453125,
-      "z": 0.6939453125
+      "x": 0.68048095703125,
+      "y": 0.68048095703125,
+      "z": 0.68048095703125
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -793,7 +793,7 @@
       "__id__": 15
     },
     "_enabled": true,
-    "time": 60,
+    "time": 3,
     "_id": "a0rRj6SWdIPpZ3waWHyoSZ"
   },
   {
@@ -4510,7 +4510,7 @@
     },
     "NextScene": "begin",
     "LastScene": "shop2",
-    "TargetScore": 2010,
+    "TargetScore": 0,
     "DialogSprite": {
       "__id__": 108
     },

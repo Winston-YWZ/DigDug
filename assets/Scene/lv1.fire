@@ -41,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.6939453125,
-      "y": 0.6939453125,
-      "z": 0.6939453125
+      "x": 0.68048095703125,
+      "y": 0.68048095703125,
+      "z": 0.68048095703125
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -55,7 +55,7 @@
     "_zIndex": 0,
     "_is3DNode": true,
     "groupIndex": 0,
-    "autoReleaseAssets": false,
+    "autoReleaseAssets": true,
     "_id": "d7a3ffa4-6d74-4b85-9f27-ea68337416bc"
   },
   {
@@ -3333,7 +3333,7 @@
       "__id__": 95
     },
     "_enabled": true,
-    "time": 60,
+    "time": 3,
     "_id": "b4tKhe5xROfbvjM9uwxk9i"
   },
   {
@@ -4183,8 +4183,8 @@
       "__id__": 96
     },
     "NextScene": "shop1",
-    "LastScene": "begin",
-    "TargetScore": 650,
+    "LastScene": "lv1",
+    "TargetScore": 0,
     "DialogSprite": {
       "__id__": 113
     },
